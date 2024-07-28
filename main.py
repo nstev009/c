@@ -576,6 +576,9 @@ while run:
                 white_options = check_options(white_pieces, white_locations, 'white')
 
 
+    if (len(black_pieces) == 1) and (len(white_pieces) == 1):
+        winner = 'NOBODY'
+    
     if winner != '':
         game_over = True
         draw_game_over()
