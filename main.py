@@ -474,7 +474,7 @@ while run:
                         black_locations.pop(black_piece)
                         black_moved.pop(black_piece)
                     #adding handling to capture enpassant piece
-                    if click_coords == black_ep:
+                    if click_coords == black_ep and white_pieces[selection] == 'pawn':
                         black_piece = black_locations.index((black_ep[0], black_ep[1]-1))
                         captured_pieces_white.append(black_pieces[black_piece])
                         black_pieces.pop(black_piece)
@@ -527,7 +527,7 @@ while run:
                         white_locations.pop(white_piece)
                         white_moved.pop(white_piece)
                     #adding handling to capture enpassant piece
-                    if click_coords == white_ep:
+                    if click_coords == white_ep and black_pieces[selection] == 'pawn':
                         white_piece = white_locations.index((white_ep[0], white_ep[1]+1))
                         captured_pieces_black.append(white_pieces[white_piece])
                         white_pieces.pop(white_piece)
